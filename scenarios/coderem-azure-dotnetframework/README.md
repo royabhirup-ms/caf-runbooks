@@ -9,7 +9,7 @@
 
 ## Contents
 
-- [**Introduction**](#introduction)
+- [**Introduction**](#1-introduction)
 - [**Role and Responsibilities**](#role-and-responsibilities)
 - [**Planning**](#planning)
 - [**Pre-requisites**](#pre-requisites)
