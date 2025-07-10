@@ -92,11 +92,6 @@ Before we explore specific strategies, let's first understand the basic principl
 
 - [Sign in to Visual Studio using a GitHub account](https://learn.microsoft.com/en-us/visualstudio/ide/work-with-github-accounts) with [Copilot access](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot#getting-access-to-copilot).
 
-- Supported subscription plans:
-  - Copilot Pro
-  - Copilot Pro+
-  - Copilot Business
-  - Copilot Enterprise
 - Supported language and version:
   - The Copilot Prompt is limited to C# 7.3 features only. Please avoid using:
   - C# 8.0 features like using declarations (using var x = ...)
