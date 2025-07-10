@@ -325,9 +325,9 @@ Once the build is completed successfully after each migration, you can check and
 
 7. **Manual Modification on Copilot Generated Prompts** : Sometimes copilot generated prompts may need manual modification to make it more accurate and relevant to the specific code remediation task. It is recommended to review the generated prompt and make necessary modifications before executing it.
 
-    **Example**: Sometimes Copilot generated prompt for Microsoft Entra ID integration [Copilot Generated Entra ID Prompt](./prompts/CopilotGeneratedPrompts/windows-auth-to-entra-id.netfx.prompt-copilot.md)
-    does not work in .net framework, hence we followed manual modification in this scenario to make it work in .net framework before executing it for code remediation.
-    The modified prompt for Microsoft Entra ID integration [Manually Modified Entra ID Prompt](./prompts/CopilotGeneratedPrompts/windows-auth-to-entra-id.netfx.prompt-manually-modified.md)
+    **Example**: Copilot generated a prompt for Microsoft Entra ID integration [Copilot Generated Entra ID Prompt](./prompts/CopilotGeneratedPrompts/windows-auth-to-entra-id.netfx.prompt-copilot.md)
+    which included packages that do not work in .net framework, but work in .net core applications, hence we followed manual modification in this scenario to make it work in .net framework before executing it for code remediation.
+    See the full modified prompt with updated nuget packages for Microsoft Entra ID integration [Manually Modified Entra ID Prompt](./prompts/CopilotGeneratedPrompts/windows-auth-to-entra-id.netfx.prompt-manually-modified.md)
     
     In conclusion, it’s essential to validate prompts and incorporate contextual adjustments as necessary before proceeding.
 
