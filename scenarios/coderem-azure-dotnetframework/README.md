@@ -22,7 +22,7 @@
 
 ## 1. Introduction
 
-This portion offers a concise overview of the process of remediate AppCat issues which are recommended to use relevant Azure PaaS components using GitHub Copilot Prompt Engineering.
+This document offers a concise overview of the process of remediating AppCat issues which are recommended to use relevant Azure PaaS components using GitHub Copilot Prompt Engineering.
 
 ### 1.1 Github Copilot Prompt Engineering
 
