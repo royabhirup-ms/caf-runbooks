@@ -288,7 +288,7 @@ See the steps [Run-EntraID-Technology-Specific-Prompt](Run-EntraID-Technology-Sp
 
 Once the build is completed successfully after each migration, you can check and confirm the running status of your application.
  
-#### 7. Guide To Known Issues - 
+#### 7. Guide To Known Issues
 
 1. **msbuild/dotnet build issue**: If you encounter any build issues, please ensure that the correct version of the .NET framework is installed on your machine. Even though it is instructed to copilot in guidance file to use  "msbuild" to build the application post migration, sometime it fails, hence copilot uses "dotnet build" command to build the application.
 
