@@ -97,7 +97,12 @@ Before we explore specific strategies, let's first understand the basic principl
   - Copilot Pro+
   - Copilot Business
   - Copilot Enterprise
-- Code must be written in C#. 
+- Supported language and version:
+  - The Copilot Prompt is limited to C# 7.3 features only. Please avoid using:
+  - C# 8.0 features like using declarations (using var x = ...)
+  - await using statements
+  - Switch expressions
+  - etc.
 
 
 ## 5. Utilization of Prompts:
@@ -305,7 +310,7 @@ Once the build is completed successfully after each migration, you can check and
     ![Claude Sonnet 3.7](./images/sonnet37.png)
 
 
-4. **Manual code changes needed code errors** : Sometimes copilot generates the code changes which are not syntactically correct and build issue occurs, in that scenario, please review the code changes and make the manual changes as needed.
+4. **Manual code changes needed on code/build errors** : Sometimes copilot generates the code changes which are not syntactically correct and build issue occurs, in that scenario, please review the code changes and make the manual changes as needed.
 
     ![Manual changes for error](./images/manualcng.png)
 
@@ -320,9 +325,11 @@ Once the build is completed successfully after each migration, you can check and
 
 7. **Manual Modification on Copilot Generated Prompts** : Sometimes copilot generated prompts may need manual modification to make it more accurate and relevant to the specific code remediation task. It is recommended to review the generated prompt and make necessary modifications before executing it.
 
-    **Example**: Copilot generated prompt for Microsoft Entra ID integration [Copilot Generated Entra ID Prompt](./prompts/CopilotGeneratedPrompts/windows-auth-to-entra-id.netfx.prompt-copilot.md)
-    which does not work in .net framework, hence manual modification is required to make it work in .net framework before executing it for code remediation.
+    **Example**: Sometimes Copilot generated prompt for Microsoft Entra ID integration [Copilot Generated Entra ID Prompt](./prompts/CopilotGeneratedPrompts/windows-auth-to-entra-id.netfx.prompt-copilot.md)
+    does not work in .net framework, hence we followed manual modification in this scenario to make it work in .net framework before executing it for code remediation.
     The modified prompt for Microsoft Entra ID integration [Manually Modified Entra ID Prompt](./prompts/CopilotGeneratedPrompts/windows-auth-to-entra-id.netfx.prompt-manually-modified.md)
+    
+    In conclusion, it’s essential to validate prompts and incorporate contextual adjustments as necessary before proceeding.
 
 ### 8. References
 
