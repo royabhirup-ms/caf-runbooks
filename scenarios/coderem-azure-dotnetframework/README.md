@@ -174,7 +174,7 @@ This will generate a new prompt for code remediation on Azure Key Vault integrat
 **Example**, please see the full copilot generated prompt for Azure Key Vault integration [Key Vault Prompt](./prompts/CopilotGeneratedPrompts/secrets-to-keyvault.netfx.prompt.md) 
 
 
-Now, we have successfully created a prompt for Azure Key Vault integration. Let's proceed with STEP 2 i.e., the execution of the prompt to remediate the hardcoded secrets issue.
+Now, we have successfully created a prompt for Azure Key Vault integration. Let's proceed with **STEP 2** i.e., the execution of the prompt to remediate the hardcoded secrets issue.
 
 See the steps [Run-KeyVault-Technology-Specific-Prompt](Run-KeyVault-Technology-Specific-Prompt.md)
 
@@ -210,7 +210,7 @@ This will generate a new prompt for code remediation on Azure Blob Storage integ
 
 **Example**, please see the full copilot generated prompt for Azure Blob Storage integration [BlobStorage Prompt](./prompts/CopilotGeneratedPrompts/local-filesystem-to-azure-blob-storage.netfx.prompt.md) 
 
-Now, we have successfully created a prompt for Azure Blob Storage integration. Let's proceed with STEP 2 i.e., the execution of the prompt to remediate the Local file system IO issue.
+Now, we have successfully created a prompt for Azure Blob Storage integration. Let's proceed with **STEP 2** i.e., the execution of the prompt to remediate the Local file system IO issue.
 
 See the steps [Run-BlobStorage-Technology-Specific-Prompt](Run-BlobStorage-Technology-Specific-Prompt.md)
 
@@ -245,7 +245,7 @@ This will generate a new prompt for code remediation on Azure Redis Cache integr
 
 **Example**, please see the full copilot generated prompt for Azure Redis Cache integration [Redis Prompt](./prompts/CopilotGeneratedPrompts/local-caching-to-azure-redis-cache.prompt.md) 
 
-Now, we have successfully created a prompt for Azure Redis Cache integration. Let's proceed with STEP 2 i.e., the execution of the prompt to remediate the Local caching issue.
+Now, we have successfully created a prompt for Azure Redis Cache integration. Let's proceed with **STEP 2** i.e., the execution of the prompt to remediate the Local caching issue.
 
 See the steps [Run-RedisCache-Technology-Specific-Prompt](Run-RedisCache-Technology-Specific-Prompt.md)
 
@@ -280,7 +280,7 @@ This will generate a new prompt for code remediation on Microsoft Entra ID integ
 
 **Example**, please see the full copilot generated prompt for Microsoft Entra ID integration [Entra ID Prompt](./prompts/CopilotGeneratedPrompts/windows-auth-to-entra-id.netfx.prompt-manually-modified.md) 
 
-Now, we have successfully created a prompt for Microsoft Entra ID integration. Let's proceed with STEP 2 i.e., the execution of the prompt to remediate the Windows authentication issue.
+Now, we have successfully created a prompt for Microsoft Entra ID integration. Let's proceed with **STEP 2** i.e., the execution of the prompt to remediate the Windows authentication issue.
 
 See the steps [Run-EntraID-Technology-Specific-Prompt](Run-EntraID-Technology-Specific-Prompt.md)
 

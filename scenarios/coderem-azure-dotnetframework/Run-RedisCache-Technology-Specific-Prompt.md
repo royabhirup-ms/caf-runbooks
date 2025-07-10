@@ -13,7 +13,7 @@ This section represents on how to execute the newly created prompt for code reme
 1. Instruction markdown file.
 2. The Codebase to be migrated.
 3. Run the newly created prompt for code remediation on Azure Redis Cache integration.
-   This will also generate a progress file to track the status of the code remediation process. Example: See the full progress [here](./prompts/RedisCache-Progress/progress.md).
+   This will also generate a progress file to track the status of the code remediation process. Example: **See the full progress** [here](./prompts/RedisCache-Progress/progress.md).
 
     ![Run Prompt Redis](./images/runpromptredis.png)
 

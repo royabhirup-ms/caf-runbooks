@@ -12,23 +12,23 @@ This section represents on how to create and attach user defined prompts to crea
 
 1. Instruction markdown file ([Instruction file](./prompts/UserDefinedPrompts/migration-guidance.netfx.instructions.md))
 
-Use: Instruction level prompt file gives the copilot a direction on how to work on .net migration or replatform scenarios into azure.
+	**Utility**: Instruction level prompt file gives the copilot a direction on how to work on .net migration or replatform scenarios into azure.
 
 2. Prompt creation template markdown file ([Prompt Template](./prompts/UserDefinedPrompts/PROMPT_TEMPLATE.md))
 
-Use: This file is used as a reference inside the below prompt creation markdown file.
+	**Utility**: This file is used as a reference inside the below prompt creation markdown file.
 
 3. Prompt creation markdown file ([Create Prompt](./prompts/UserDefinedPrompts/create-prompt.netfx.prompt.md))
 
-Use: This file provides instruction with set of rules to copilot for creating a new prompt for migrating code from one specific technology to another.
+	**Utility**: This file provides instruction with set of rules to copilot for creating a new prompt for migrating code from one specific technology to another.
 
 4. App Cat Report Json File
 
-Use: This file is used as a source of remediation issues and helps copilot to search and identify all applications, services, and dependencies related to specific azure services.
+	**Utility**: This file is used as a source of remediation issues and helps copilot to search and identify all applications, services, and dependencies related to specific azure services.
 
 5. The Codebase to be migrated.
 
-Use: This is the codebase that needs to be migrated to azure services.
+	**Utility**: This is the codebase that needs to be migrated to azure services.
 
    ![File and LLM Selection](./images/fileselection.png)
 
