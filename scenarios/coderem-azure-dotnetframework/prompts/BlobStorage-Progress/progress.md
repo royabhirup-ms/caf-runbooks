@@ -51,3 +51,8 @@
 - Using managed identity for Azure authentication
 - Following C# 7.3 language constraints
 - All new files must be explicitly added to project files
+
+
+---
+
+[*Back to content*](README.md)

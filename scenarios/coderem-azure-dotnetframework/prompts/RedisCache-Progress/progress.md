@@ -81,3 +81,8 @@ All local in-process session state dependencies have been successfully replaced 
 - ⚠️ eShopLegacyMVC.Test: Build fails due to missing main project references
 
 **Note:** The build failures are due to missing Visual Studio Web Application project system files in the current build environment, not issues with the Redis migration. All Redis-related packages are properly installed and referenced.
+
+
+---
+
+[*Back to content*](README.md)

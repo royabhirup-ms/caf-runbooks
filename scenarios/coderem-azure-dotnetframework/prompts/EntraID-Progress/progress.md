@@ -60,3 +60,8 @@
 2. Set up application secrets and client IDs in Azure configuration
 3. Deploy to Azure App Service with managed identity enabled
 4. Configure Azure SQL Database authentication
+
+
+---
+
+[*Back to content*](README.md)

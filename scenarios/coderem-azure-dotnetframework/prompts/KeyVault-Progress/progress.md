@@ -51,3 +51,8 @@
 - [✓] `/Controllers/CatalogController.cs` (modified)
 - [✓] `/Web.config` (modified)
 - [✓] `/eShopLegacyMVC.csproj` (modified)
+
+
+---
+
+[*Back to content*](README.md)

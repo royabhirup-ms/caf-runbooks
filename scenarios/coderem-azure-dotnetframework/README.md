@@ -152,7 +152,7 @@ Let's see the AppCat report findings related to Azure Key Vault:
 ![Appcat Findings](./images/appcatfindings.png)
 
 
-Let's proceed with **STEP 1** i.e., [Create-Technology-Specific-Prompt](Create-Technology-Specific-Prompt.md) to create and attach necessary files which will be used to create prompt for Azure Key Vault integration.
+Let's proceed with **STEP 1** i.e., [Create-Technology-Specific-Prompt](Create-Technology-Specific-Prompt.md) to create and attach necessary files as a context in copilot chat which will be used to create prompt for Azure Key Vault integration.
 
 Once the files in copilot chat are attached, tell copilot to remediate and apply the code changes for the AppCat issues related to hardcoded secrets (i.e., Technology X) issue using Azure Keyvault (i.e., Technology Y) as a next step.
 In background copilot will follow the guidance provided in the instruction file and will generate a new prompt which will be followed to remediate the specific issues.
