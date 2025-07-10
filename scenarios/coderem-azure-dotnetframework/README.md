@@ -290,39 +290,39 @@ Once the build is completed successfully after each migration, you can check and
  
 #### 7. Guide To Known Issues - 
 
-1. msbuild/dotnet build issue: If you encounter any build issues, please ensure that the correct version of the .NET framework is installed on your machine. Even though it is instructed to copilot in guidance file to use  "msbuild" to build the application post migration, sometime it fails, hence copilot uses "dotnet build" command to build the application.
+1. **msbuild/dotnet build issue**: If you encounter any build issues, please ensure that the correct version of the .NET framework is installed on your machine. Even though it is instructed to copilot in guidance file to use  "msbuild" to build the application post migration, sometime it fails, hence copilot uses "dotnet build" command to build the application.
 
-![Build Issues](./images/msbuilderr.png)
+    ![Build Issues](./images/msbuilderr.png)
 
-2. Continue option : Copliot sometimes provides the option to continue the code changes in the same prompt and the execution stops, in that scenario please review the code changes and continue if needed. Copilot works better in smaller scope of commands, so it is recommended to clear the chat and try again with new copilot chat window.
+2. **Continue option** : Copliot sometimes provides the option to continue the code changes in the same prompt and the execution stops, in that scenario please review the code changes and continue if needed. Copilot works better in smaller scope of commands, so it is recommended to clear the chat and try again with new copilot chat window.
 
-![Continue option](./images/continueerr.png)
+    ![Continue option](./images/continueerr.png)
 
-3. Claude Sonnet 4 & 3.7 : It is recommended to use the the LLM Claude Sonnet 4 but sometimes copilot fails to execute the code changes in middle of migration, in this scenario, review your changes carefully and use other option like Claude Sonnet 3.7 which also works well.
+3. **Claude Sonnet 4 & 3.7** : It is recommended to use the the LLM Claude Sonnet 4 but sometimes copilot fails to execute the code changes in middle of migration, in this scenario, review your changes carefully and use other option like Claude Sonnet 3.7 which also works well.
 
-![Claude Sonnet 4](./images/sonnet4.png)
+    ![Claude Sonnet 4](./images/sonnet4.png)
 
-![Claude Sonnet 3.7](./images/sonnet37.png)
+    ![Claude Sonnet 3.7](./images/sonnet37.png)
 
 
-4. Manual code changes needed code errors : Sometimes copilot generates the code changes which are not syntactically correct and build issue occurs, in that scenario, please review the code changes and make the manual changes as needed.
+4. **Manual code changes needed code errors** : Sometimes copilot generates the code changes which are not syntactically correct and build issue occurs, in that scenario, please review the code changes and make the manual changes as needed.
 
-![Manual changes for error](./images/manualcng.png)
+    ![Manual changes for error](./images/manualcng.png)
 
-5. Visual Studio Code and Visual Studio both IDEs are required : Visual Studio Code required to execute the commands adding context of the targeted codebase, Visual Studio is required to install nuget packages using nuget package manager which is more user friendly.
+5. **Visual Studio Code and Visual Studio both IDEs are required** : Visual Studio Code required to execute the commands adding context of the targeted codebase, Visual Studio is required to install nuget packages using nuget package manager which is more user friendly.
 
-![Code base VS Code](./images/codebase.png)
-![Nuget VS](./images/nugetredis.png)
+    ![Code base VS Code](./images/codebase.png)
+    ![Nuget VS](./images/nugetredis.png)
 
-6. New branch creation : Copilot code remediation using prompt does not create a new branch like copilot for .net upgrade does, we have to manually create a new branch where coplilot code changes can be performed, later on, we can merge the changes to the main branch.
+6. **New branch creation** : Copilot code remediation using prompt does not create a new branch like copilot for .net upgrade does, we have to manually create a new branch where coplilot code changes can be performed, later on, we can merge the changes to the main branch.
 
-![Branch Creation](./images/branch.png)
+    ![Branch Creation](./images/branch.png)
 
-7. Manual Modification on Copilot Generated Prompts : Sometimes copilot generated prompts may need manual modification to make it more accurate and relevant to the specific code remediation task. It is recommended to review the generated prompt and make necessary modifications before executing it.
+7. **Manual Modification on Copilot Generated Prompts** : Sometimes copilot generated prompts may need manual modification to make it more accurate and relevant to the specific code remediation task. It is recommended to review the generated prompt and make necessary modifications before executing it.
 
- Example: Copilot generated prompt for Microsoft Entra ID integration [Copilot Generated Entra ID Prompt](./prompts/CopilotGeneratedPrompts/windows-auth-to-entra-id.netfx.prompt-copilot.md)
- which does not work in .net framework, hence manual modification is required to make it work in .net framework before executing it for code remediation.
- The modified prompt for Microsoft Entra ID integration [Manually Modified Entra ID Prompt](./prompts/CopilotGeneratedPrompts/windows-auth-to-entra-id.netfx.prompt-manually-modified.md)
+    **Example**: Copilot generated prompt for Microsoft Entra ID integration [Copilot Generated Entra ID Prompt](./prompts/CopilotGeneratedPrompts/windows-auth-to-entra-id.netfx.prompt-copilot.md)
+    which does not work in .net framework, hence manual modification is required to make it work in .net framework before executing it for code remediation.
+    The modified prompt for Microsoft Entra ID integration [Manually Modified Entra ID Prompt](./prompts/CopilotGeneratedPrompts/windows-auth-to-entra-id.netfx.prompt-manually-modified.md)
 
 ### 8. References
 
