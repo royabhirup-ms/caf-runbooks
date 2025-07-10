@@ -1,4 +1,4 @@
-﻿## Run Technology Specific Prompt for Azure Redis Cache Integration:
+﻿## Run Technology Specific Prompt for Microsoft Entra ID Integration:
 
 This section represents on how to execute the newly created prompt for code remediation on a specific technology.
 
