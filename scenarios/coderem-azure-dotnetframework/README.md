@@ -10,14 +10,14 @@
 ## Contents
 
 - [**Introduction**](#1-introduction)
-- [**Role and Responsibilities**](#role-and-responsibilities)
-- [**Planning**](#planning)
-- [**Pre-requisites**](#pre-requisites)
-- [**Utilization of Prompts**](#utilization-of-prompts)
-- [**Migration Steps of Github Copilot Using Prompt Engineering for Azure PaaS Services**](#migration-steps-of-github-copilot-using-prompt-engineering-for-azure-paas-services)
-- [**Guide To Known Issues**](#guide-to-known-issues)
-- [**References**](#references)
-- [**Abbreviations**](#abbreviations)
+- [**Role and Responsibilities**](#2-role-and-responsibilities)
+- [**Planning**](#3-planning)
+- [**Pre-requisites**](#4-pre-requisites)
+- [**Utilization of Prompts**](#5-utilization-of-prompts)
+- [**Migration Steps of Github Copilot Using Prompt Engineering for Azure PaaS Services**](#6-migration-steps-of-github-copilot-using-prompt-engineering-for-azure-paas-services)
+- [**Guide To Known Issues**](#7-guide-to-known-issues)
+- [**References**](#8-references)
+- [**Abbreviations**](#9-abbreviations)
 
 
 ## 1. Introduction
