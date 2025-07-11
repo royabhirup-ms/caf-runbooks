@@ -16,7 +16,6 @@ This section represents on how to execute the newly created prompt for code reme
    This will also generate a progress file to track the status of the code remediation process. Example: **See the full progress** [here](./prompts/BlobStorage-Progress/progress.md).
 
     ![Run Prompt Blob](./images/runpromptblob.png)
-
 This will generate the necessary code changes to replace Local file system IO with Azure Blob Storage integration and will build the code as per instructions successfully.
 
    ![Progress Blob Storage](./images/progressstatusblob.png)

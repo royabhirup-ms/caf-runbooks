@@ -16,11 +16,10 @@ This section represents on how to execute the newly created prompt for code reme
    This will also generate a progress file to track the status of the code remediation process. Example: **See the full progress** [here](./prompts/EntraID-Progress/progress.md).
 
     ![Run Prompt Entra ID](./images/runpromptentraid.png)
-
 This will generate the necessary code changes to replace Windows authentication with Microsoft Entra ID integration and will build the code as per instructions successfully.
 
-   ![Progress Entra ID](./images/progressstatusentraid.png)
-   ![Progress Entra ID 2](./images/progressstatusentraid2.png)
+    ![Progress Entra ID](./images/progressstatusentraid.png)
+    ![Progress Entra ID 2](./images/progressstatusentraid2.png)
 
 Note: 
 1. Ensure to verify the modified configuration file and application code.
