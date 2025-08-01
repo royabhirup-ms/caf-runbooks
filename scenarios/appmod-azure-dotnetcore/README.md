@@ -99,8 +99,6 @@ App Modernization for .NET currently supports the following predefined tasks:
   - Copilot Business
   - Copilot Enterprise
 
-- [Sign in to Visual Studio using a GitHub account](https://learn.microsoft.com/en-us/visualstudio/ide/work-with-github-accounts) with [Copilot access](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot#getting-access-to-copilot).
-
 
 ## 5. GitHub Copilot App Modernization for .NET Core
 
