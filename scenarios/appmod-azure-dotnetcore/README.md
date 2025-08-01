@@ -91,7 +91,7 @@ App Modernization for .NET currently supports the following predefined tasks:
 - To use GitHub Copilot, you can install the following Integrated Development Environments (IDEs):
   - [Visual Studio 2022 version 17.14.7 or newer](https://visualstudio.microsoft.com/downloads/)
   - [Visual Studio Code](https://code.visualstudio.com/)
-- A GitHub account to connect your code editor to Copilot
+- A GitHub account with GitHub Copilot enabled [See the full](https://github.com/features/copilot)
   - [Sign in to Visual Studio using a GitHub account](https://learn.microsoft.com/en-us/visualstudio/ide/work-with-github-accounts) with [Copilot access](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot#getting-access-to-copilot).
  - Supported subscription plans:
   - Copilot Pro
