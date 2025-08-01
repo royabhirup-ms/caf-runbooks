@@ -36,4 +36,4 @@ This section represents on how to execute the newly created prompt for code reme
 
 ---
 
-[*Back to content*](README.md)
+[*Back to content*](../README.md)

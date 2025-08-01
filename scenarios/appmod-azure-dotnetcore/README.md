@@ -134,7 +134,7 @@ For an example, here is the [full](./common/output_20250731_185355.json) assessm
 
 **Note** - Select the LLM **Claude Sonnet 4** or **Claude Sonnet 3.7** for best results.
 
-## 5.3 Execution of GitHub Copilot app modernization for .NET:
+## 5.3 Execution of GitHub Copilot app modernization for .NET Core:
 
 We will analyze and execute GitHub Copilot using specific Azure services below:
 
@@ -150,7 +150,7 @@ We will analyze and execute GitHub Copilot using specific Azure services below:
 
 ## 6.1 Azure Key Vaults:
 
-Let’s prepare an application which has hardcoded connection strings and passwords in the code.
+Let’s prepare a .NET core application which has hardcoded connection strings and passwords in the code.
 
 ![Hard Codded Password](./images/hardcoddedpassword.png)
 
@@ -194,7 +194,7 @@ Here are some code changes made by copilot for Azure Key Vault integration:
 
 ## 6.2 Azure Blob Storage:
 
-Let’s prepare an application which has System.IO.File references with file access dependencies of server in the code.
+Let’s prepare a .NET core application which has System.IO.File references with file access dependencies of server in the code.
 
 ![Local File IO](./images/localio.png)
 
@@ -236,7 +236,7 @@ Here are some code changes made by copilot for Azure Blob Storage integration:
 
 ## 6.3 Microsoft Entra ID:
 
-Let’s prepare an application which has Windows auth for authenticating users references and dependencies in the code.
+Let’s prepare a .NET core application which has Windows auth for authenticating users references and dependencies in the code.
 
 ![windows auth](./images/windowsauth.png)
 
@@ -279,7 +279,7 @@ Here are some code changes made by copilot for Microsoft Entra ID integration:
 
 ## 6.4 Azure Service Bus:
 
-Let’s prepare an application which has MSMQ implementation in the code.
+Let’s prepare a .NET core application which has MSMQ implementation in the code.
 
 ![MSMQ](./images/msmq.png)
 
@@ -341,7 +341,7 @@ Create a technology specific prompt.
 Execute the newly created prompt to remediate the code issues for Target Technology integration:
 
 
-Let’s prepare an application which has Local caching references and dependencies in the code.
+Let’s prepare a .NET core application which has Local caching references and dependencies in the code.
 
 ![Local Caching](./images/localcaching.png)
 

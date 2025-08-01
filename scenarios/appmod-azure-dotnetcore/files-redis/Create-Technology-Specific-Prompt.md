@@ -41,4 +41,4 @@ Save the prompts in the same repository where the codebase is present for copilo
 
 ---
 
-[*Back to content*](README.md)
+[*Back to content*](../README.md)
