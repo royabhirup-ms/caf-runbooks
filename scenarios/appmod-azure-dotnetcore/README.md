@@ -400,7 +400,7 @@ See the steps [Run-RedisCache-Technology-Specific-Prompt](./files-redis/Run-Redi
 
 | **Abbreviations**               | **Definition**       
 |---------------------------------|----------------------|
-| AppCat  | Azure Migrate application and code assessment|
+| AppCat  | Azure Migrate Application and Code Assessment|
 | LLM     | Large Language Models  |
 
 
