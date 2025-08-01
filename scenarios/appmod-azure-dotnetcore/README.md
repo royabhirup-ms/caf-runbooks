@@ -401,6 +401,6 @@ See the steps [Run-RedisCache-Technology-Specific-Prompt](./files-redis/Run-Redi
 | **Abbreviations**               | **Definition**       
 |---------------------------------|----------------------|
 | AppCat  | Azure Migrate application and code assessment|
-| LLM     | Language Learning Model  |
+| LLM     | Large Language Models  |
 
 
