@@ -20,19 +20,17 @@
   - [**Run Assessment**](#53-run-assessment)
   - [**Execution of GitHub Copilot app modernization for .NET Applications**](#53-execution-of-github-copilot-app-modernization-for-net-applications)
 - [**Migration Steps of Github Copilot App Modernization for Azure PaaS Services**](#6-migration-steps-of-github-copilot-app-modernization-for-azure-paas-services)
-  - [**Azure Key Vaults**](#61-azure-key-vaults)
-    - [**Azure key vault migration for .Net Core Application**](#611-azure-key-vault-migration-for-net-core-application)
-    - [**Azure key vault migration for .Net Framework Application**](#612-azure-key-vault-migration-for-net-framework-application)
-  - [**Azure Blob Storage**](#62-azure-blob-storage)
-    - [**Azure blob storage migration for .Net Core Application**](#621-azure-blob-storage-migration-for-net-core-application)
-    - [**Azure blob storage migration for .Net Framework Application**](#622-azure-blob-storage-migration-for-net-framework-application)  
-  - [**Microsoft Entra ID**](#63-microsoft-entra-id)
-  - [**Azure Service Bus**](#64-azure-service-bus)
-    - [**Azure service bus migration for .Net Core Application**](#641-azure-service-bus-migration-for-net-core-application)
-    - [**Azure service bus migration for .Net Framework Application**](#642-azure-service-bus-migration-for-net-framework-application)
-  - [**Azure Redis Cache**](#65-azure-redis-cache)
-  - [**Azure SQL Database**](#66-azure-sql-database)  
-    - [**Azure SQL Database migration for .Net Framework Application**](#661-azure-sql-database-migration-for-net-framework-application)
+  - [**Migration Scenarios for .NET Core Applications**](#61-migration-scenarios-for-net-core-applications)
+    - [**Azure Key Vaults**](#611-azure-key-vaults)
+    - [**Azure Blob Storage**](#612-azure-blob-storage)
+    - [**Microsoft Entra ID**](#613-microsoft-entra-id)
+    - [**Azure Service Bus**](#614-azure-service-bus)
+    - [**Azure Redis Cache**](#615-azure-redis-cache)
+  - [**Migration Scenarios for .NET Framework Applications**](#62-migration-scenarios-for-net-framework-applications)
+    - [**Azure Key Vaults**](#621-azure-key-vaults)
+    - [**Azure Blob Storage**](#622-azure-blob-storage)
+    - [**Azure Service Bus**](#623-azure-service-bus)
+    - [**Azure SQL Database**](#624-azure-sql-database)
 - [**Guide To Known Issues**](#7-guide-to-known-issues)
 - [**References**](#8-references)
 - [**Abbreviations**](#9-abbreviations)
@@ -164,9 +162,9 @@ We will analyze and execute GitHub Copilot using specific Azure services below:
 
 ## 6. Migration Steps of Github Copilot App Modernization for Azure PaaS Services
 
-## 6.1 Azure Key Vaults
+### 6.1 Migration Scenarios for .NET Core Applications
 
-### 6.1.1 Azure key vault migration for .Net Core Application
+#### **6.1.1 Azure Key Vaults**
 
 Let’s prepare a .NET core application which has hardcoded connection strings and passwords in the code.
 
@@ -209,49 +207,7 @@ Here are some code changes made by copilot for Azure Key Vault integration:
 ![kv code 4](./images/kvcode4.png)
 ![kv code 5](./images/kvcode5.png)
 
-### 6.1.2 Azure key vault migration for .Net Framework Application
-
-Open the assessment report generated for the .NET Framework application, and click **Run** to begin migrating plain text credentials to secure storage using Managed Identity and Azure Key Vault.
-
-![Run Local Credentials Issue](./images-dnf/lcr10.png)
-
-GitHub Copilot will begin assessing the codebase for sensitive information such as passwords, connection strings, application settings, and other credentials that should be moved to a secure vault. In addition to scanning class files, it will also inspect the *config* files for any sensitive data.
-
-GitHub Copilot will also initiate the creation of a remediation plan and track progress using the Azure Key Vault knowledge base.You’ll need to grant permission to execute the MCP Server Knowledge Base, which enables the generation of the *plan.md* and *progress.md* files in the root directory of the application. These files are essential for triggering and guiding the code remediation process.
-
-![Permission for AzureKeyVaultKnowledgeBase](./images-dnf/lcr01.png)
-
-Review the generated plan and progress markdown file, we can edit these files if required before starting the migration.
-If everything looks good, we can proceed with the execution of the plan to start the code remediation by just telling copilot the same.
-
-![Migration go ahead plan](./images-dnf/lcr02.png)
-
-For an example, we can see the [generated plan here](./files-keyvault-dnf/plan.md) and [progress here](./files-keyvault-dnf/progress.md) of the migration.
-
-Allow copilot to install the necessary nuget packages and make the code changes as per the plan and progress markdown file.
-
-![Perform Code changes](./images-dnf/lcr03.png)
-![Build failed encountered](./images-dnf/lcr04.png)
-
-- Agent will try to build the solution after considerable code changes and if the build fails the agent will automatically try to fix the issue in order to resolve the same.
-
-![Build failed again](./images-dnf/lcr05.png)
-
-- The agent will continue addressing errors until the solution builds successfully, based on the changes made for Azure Key Vault integration. Once the build succeeds, the agent will display a **Build Successful** status, followed by a **Migration Completed** confirmation.
-
-**Note** - It is recommended to fix the errors manually if copilot fails to fix, please review the changes and make necessary modifications if required.
-
-![Migration Complete](./images-dnf/lcr06.png)
-
-Here are some code changes made by copilot for Azure Key Vault integration:
-
-![Class file added](./images-dnf/lcr07.png)
-![Web.config file change](./images-dnf/lcr08.png)
-![Global.asax file change](./images-dnf/lcr09.png)
-
-## 6.2 Azure Blob Storage
-
-### 6.2.1 Azure blob storage migration for .Net Core Application
+#### **6.1.2 Azure Blob Storage**
 
 Let’s prepare a .NET core application which has System.IO.File references with file access dependencies of server in the code.
 
@@ -293,59 +249,7 @@ Here are some code changes made by copilot for Azure Blob Storage integration:
 ![blob code 3](./images/blobcode3.png)
 ![blob code 4](./images/blobcode4.png)
 
-### 6.2.2 Azure blob storage migration for .Net Framework Application
-
-Open the assessment report generated for the .NET Framework application, and click **Run** to migrate from local file system to Azure Blob Storage.
-
-![Run File System Management Issue](./images-dnf/scr24.png)
-
-GitHub Copilot will start scanning the codebase for usage of System.IO, File, Directory, and other file I/O-related operations.
-
-Also Github copilot will proceed with the creation of plan and associated progress of code remediation using Azure Blob storage knowledge base.
-Allow MCP server knowledge base execution and permissions to create a plan and progress markdown file in root directory of the application which will actually trigger the code remediation using copilot.
-
-![Permission for AzureStorageBlobKnowledgeBase](./images-dnf/scr01.png)
-![Action Plan](./images-dnf/scr02.png)
-
-Review the generated plan and progress markdown file, we can edit these files if required before starting the migration.
-If everything looks good, we can proceed with the execution of the plan to start the code remediation by just telling copilot the same.
-
-![Go ahead with migration prompt](./images-dnf/scr08.png)
-
-For an example, we can see the [generated plan here](./files-blob-dnf/plan.md/) and [progress here](./files-blob-dnf/progress.md) of the migration.
-
-Allow copilot to install the necessary nuget packages and make the code changes as per the plan and progress markdown file.
-
-![Perform Code changes](./images-dnf/scr09.png)
-
-If the agent is unable to install the package using NuGet Package Manager, it will attempt an alternative installation method. Refer to the image below for reference.
-
-![Nuget Package Manager](./images-dnf/scr10.png)
-![Build failed](./images-dnf/scr11.png)
-
-Agent created *BlobServiceStorage.cs* file to implement a basic wrapper to work with current setup.
-
-![Class file added](./images-dnf/scr12.png)
-
-The agent resolves any reference issues encountered during the build process after applying code changes related to Azure Blob Storage integration.
-
-![Reference Issues](./images-dnf/scr13.png)
-
-Next, the migration will be completed successfully and the Local File IO references will be replaced with Azure Blob Storage integration.
-Copilot will also build the solution to ensure the changes are successfully applied. If failed, copilot will automatically try to fix and rebuild the application.
-
-**Note** - It is recommended to fix the errors manually if copilot fails to fix, please review the changes and make necessary modifications if required.
-
-![Migration Results](./images-dnf/scr14.png)
-
-Here are some code changes made by copilot for Azure Blob Storage integration:
-
-![New class file added](./images-dnf/scr20.png)
-![Changes in Web.config](./images-dnf/scr21.png)
-![Changes in controller.cs file 1](./images-dnf/scr22.png)
-![Changes in controller.cs file 2](./images-dnf/scr23.png)
-
-## 6.3 Microsoft Entra ID
+#### **6.1.3 Microsoft Entra ID**
 
 Let’s prepare a .NET core application which has Windows auth for authenticating users references and dependencies in the code.
 
@@ -388,9 +292,7 @@ Here are some code changes made by copilot for Microsoft Entra ID integration:
 ![entra id code 2](./images/entraidcode2.png)
 ![entra id code 3](./images/entraidcode3.png)
 
-## 6.4 Azure Service Bus
-
-### 6.4.1 Azure service bus migration for .Net Core Application
+#### **6.1.4 Azure Service Bus**
 
 Let’s prepare a .NET core application which has MSMQ implementation in the code.
 
@@ -433,50 +335,7 @@ Here are some code changes made by copilot for Azure Service bus integration:
 ![service bus code 4](./images/servicebuscode4.png)
 ![service bus code 5](./images/servicebuscode5.png)
 
-### 6.4.2 Azure service bus migration for .Net Framework Application
-
-Open the assessment report generated for the .NET Framework application, and click **Run** to migrate from MSMQ to Azure Service Bus.
-
-![Messaging service migration issue](./images-dnf/fcr29.png)
-
-This will open the github copilot chat window to proceed with the creation of plan and associated progress of code remediation using Azure Service Bus knowledge base.
-Allow MCP server knowledge base execution and permissions to create a plan and progress markdown file in root directory of the application which will actually trigger the code remediation using copilot.
-
-![service bus mcp](./images-dnf/fcr11.png)
-![service bus folder 1](./images-dnf/fcr12.png)
-![service bus folder 2](./images-dnf/fcr14.png)
-
-Review the generated plan and progress markdown file, we can edit these files if required before starting the migration.
-If everything looks good, we can proceed with the execution of the plan to start the code remediation by just telling copilot the same.
-
-![service bus permission](./images-dnf/fcr17.png)
-
-For an example, we can see the [generated plan here](./files-servicebus-dnf/plan.md) and [progress here](./files-servicebus-dnf/progress.md) of the migration.
-
-Allow copilot to install the necessary nuget packages and make the code changes as per the plan and progress markdown file.
-
-![service bus nuget1](./images-dnf/fcr19.png)
-![service bus nuget2](./images-dnf/fcr20.png)
-![service bus nuget3](./images-dnf/fcr22.png)
-
-If the agent is unable to install the package using dotnet command, it will attempt an alternative installation method. Refer to the image below for reference.
-
-![service bus nuget4](./images-dnf/fcr24.png)
-
-Next, the migration will complete successfully, and all MSMQ operations in the code will be replaced with Azure Service Bus integration.
-Copilot will also build the solution to ensure the changes are successfully applied. If failed, copilot will automatically try to fix and rebuild the application.
-
-**Note** - It is recommended to fix the errors manually if copilot fails to fix, please review the changes and make necessary modifications if required.
-
-![service bus build sucessfull](./images-dnf/fcr25.png)
-![service bus complete](./images-dnf/fcr26.png)
-
-Here are some code changes made by copilot for Azure Service bus integration:
-
-![service bus code 1](./images-dnf/fcr30.png)
-![service bus code 2](./images-dnf/fcr31.png)
-
-## 6.5 Azure Redis Cache
+#### **6.1.5 Azure Redis Cache**
 
 As of now, copilot does not support Azure Redis Cache integration using GitHub Copilot App Modernization for .NET as this is not included as a predefined task of this visual studio extension but using prompt engineering we can use Github Copilot to remediate Local caching references and dependencies effectively and integrate Azure Redis Cache in the application.
 We will follow the below process:
@@ -528,9 +387,144 @@ Now, we have successfully created a prompt for Azure Redis Cache integration. Le
 
 See the steps [Run-RedisCache-Technology-Specific-Prompt](./files-redis/Run-RedisCache-Technology-Specific-Prompt.md)
 
-## 6.6 Azure SQL Database
+### 6.2 Migration Scenarios for .NET Framework Applications
 
-### 6.6.1 Azure SQL Database migration for .Net Framework Application
+#### **6.2.1 Azure Key Vaults**
+
+Open the assessment report generated for the .NET Framework application, and click **Run** to begin migrating plain text credentials to secure storage using Managed Identity and Azure Key Vault.
+
+![Run Local Credentials Issue](./images-dnf/lcr10.png)
+
+GitHub Copilot will begin assessing the codebase for sensitive information such as passwords, connection strings, application settings, and other credentials that should be moved to a secure vault. In addition to scanning class files, it will also inspect the *config* files for any sensitive data.
+
+GitHub Copilot will also initiate the creation of a remediation plan and track progress using the Azure Key Vault knowledge base.You’ll need to grant permission to execute the MCP Server Knowledge Base, which enables the generation of the *plan.md* and *progress.md* files in the root directory of the application. These files are essential for triggering and guiding the code remediation process.
+
+![Permission for AzureKeyVaultKnowledgeBase](./images-dnf/lcr01.png)
+
+Review the generated plan and progress markdown file, we can edit these files if required before starting the migration.
+If everything looks good, we can proceed with the execution of the plan to start the code remediation by just telling copilot the same.
+
+![Migration go ahead plan](./images-dnf/lcr02.png)
+
+For an example, we can see the [generated plan here](./files-keyvault-dnf/plan.md) and [progress here](./files-keyvault-dnf/progress.md) of the migration.
+
+Allow copilot to install the necessary nuget packages and make the code changes as per the plan and progress markdown file.
+
+![Perform Code changes](./images-dnf/lcr03.png)
+![Build failed encountered](./images-dnf/lcr04.png)
+
+- Agent will try to build the solution after considerable code changes and if the build fails the agent will automatically try to fix the issue in order to resolve the same.
+
+![Build failed again](./images-dnf/lcr05.png)
+
+- The agent will continue addressing errors until the solution builds successfully, based on the changes made for Azure Key Vault integration. Once the build succeeds, the agent will display a **Build Successful** status, followed by a **Migration Completed** confirmation.
+
+**Note** - It is recommended to fix the errors manually if copilot fails to fix, please review the changes and make necessary modifications if required.
+
+![Migration Complete](./images-dnf/lcr06.png)
+
+Here are some code changes made by copilot for Azure Key Vault integration:
+
+![Class file added](./images-dnf/lcr07.png)
+![Web.config file change](./images-dnf/lcr08.png)
+![Global.asax file change](./images-dnf/lcr09.png)
+
+#### **6.2.2 Azure Blob Storage**
+
+Open the assessment report generated for the .NET Framework application, and click **Run** to migrate from local file system to Azure Blob Storage.
+
+![Run File System Management Issue](./images-dnf/scr24.png)
+
+GitHub Copilot will start scanning the codebase for usage of System.IO, File, Directory, and other file I/O-related operations.
+
+Also Github copilot will proceed with the creation of plan and associated progress of code remediation using Azure Blob storage knowledge base.
+Allow MCP server knowledge base execution and permissions to create a plan and progress markdown file in root directory of the application which will actually trigger the code remediation using copilot.
+
+![Permission for AzureStorageBlobKnowledgeBase](./images-dnf/scr01.png)
+![Action Plan](./images-dnf/scr02.png)
+
+Review the generated plan and progress markdown file, we can edit these files if required before starting the migration.
+If everything looks good, we can proceed with the execution of the plan to start the code remediation by just telling copilot the same.
+
+![Go ahead with migration prompt](./images-dnf/scr08.png)
+
+For an example, we can see the [generated plan here](./files-blob-dnf/plan.md/) and [progress here](./files-blob-dnf/progress.md) of the migration.
+
+Allow copilot to install the necessary nuget packages and make the code changes as per the plan and progress markdown file.
+
+![Perform Code changes](./images-dnf/scr09.png)
+
+If the agent is unable to install the package using NuGet Package Manager, it will attempt an alternative installation method. Refer to the image below for reference.
+
+![Nuget Package Manager](./images-dnf/scr10.png)
+![Build failed](./images-dnf/scr11.png)
+
+Agent created *BlobServiceStorage.cs* file to implement a basic wrapper to work with current setup.
+
+![Class file added](./images-dnf/scr12.png)
+
+The agent resolves any reference issues encountered during the build process after applying code changes related to Azure Blob Storage integration.
+
+![Reference Issues](./images-dnf/scr13.png)
+
+Next, the migration will be completed successfully and the Local File IO references will be replaced with Azure Blob Storage integration.
+Copilot will also build the solution to ensure the changes are successfully applied. If failed, copilot will automatically try to fix and rebuild the application.
+
+**Note** - It is recommended to fix the errors manually if copilot fails to fix, please review the changes and make necessary modifications if required.
+
+![Migration Results](./images-dnf/scr14.png)
+
+Here are some code changes made by copilot for Azure Blob Storage integration:
+
+![New class file added](./images-dnf/scr20.png)
+![Changes in Web.config](./images-dnf/scr21.png)
+![Changes in controller.cs file 1](./images-dnf/scr22.png)
+![Changes in controller.cs file 2](./images-dnf/scr23.png)
+
+#### **6.2.3 Azure Service Bus**
+
+Open the assessment report generated for the .NET Framework application, and click **Run** to migrate from MSMQ to Azure Service Bus.
+
+![Messaging service migration issue](./images-dnf/fcr29.png)
+
+This will open the github copilot chat window to proceed with the creation of plan and associated progress of code remediation using Azure Service Bus knowledge base.
+Allow MCP server knowledge base execution and permissions to create a plan and progress markdown file in root directory of the application which will actually trigger the code remediation using copilot.
+
+![service bus mcp](./images-dnf/fcr11.png)
+![service bus folder 1](./images-dnf/fcr12.png)
+![service bus folder 2](./images-dnf/fcr14.png)
+
+Review the generated plan and progress markdown file, we can edit these files if required before starting the migration.
+If everything looks good, we can proceed with the execution of the plan to start the code remediation by just telling copilot the same.
+
+![service bus permission](./images-dnf/fcr17.png)
+
+For an example, we can see the [generated plan here](./files-servicebus-dnf/plan.md) and [progress here](./files-servicebus-dnf/progress.md) of the migration.
+
+Allow copilot to install the necessary nuget packages and make the code changes as per the plan and progress markdown file.
+
+![service bus nuget1](./images-dnf/fcr19.png)
+![service bus nuget2](./images-dnf/fcr20.png)
+![service bus nuget3](./images-dnf/fcr22.png)
+
+If the agent is unable to install the package using dotnet command, it will attempt an alternative installation method. Refer to the image below for reference.
+
+![service bus nuget4](./images-dnf/fcr24.png)
+
+Next, the migration will complete successfully, and all MSMQ operations in the code will be replaced with Azure Service Bus integration.
+Copilot will also build the solution to ensure the changes are successfully applied. If failed, copilot will automatically try to fix and rebuild the application.
+
+**Note** - It is recommended to fix the errors manually if copilot fails to fix, please review the changes and make necessary modifications if required.
+
+![service bus build sucessfull](./images-dnf/fcr25.png)
+![service bus complete](./images-dnf/fcr26.png)
+
+Here are some code changes made by copilot for Azure Service bus integration:
+
+![service bus code 1](./images-dnf/fcr30.png)
+![service bus code 2](./images-dnf/fcr31.png)
+
+#### **6.2.4 Azure SQL Database**
 
 Open the assessment report generated for the .NET Framework application, and click **Run** to migrate from SQL Server to Managed Identity based Azure SQL Database.
 
