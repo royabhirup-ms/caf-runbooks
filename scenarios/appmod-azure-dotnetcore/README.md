@@ -102,7 +102,7 @@ App Modernization for .NET currently supports the following predefined tasks:
 ## 4. Pre-requisites
 
 - Finalization of the applications to be migrated (Wave planning)  
-- Run [Azure Migrate Tool](https://learn.microsoft.com/en-us/azure/migrate/appcat/dotnet?view=migrate-classic) for assessment - Identify all applications, services, and dependencies for better visibility before copilot assessment scan.
+- Run [APPCAT](https://learn.microsoft.com/en-us/azure/migrate/appcat/dotnet?view=migrate-classic) for assessment - Identify all applications, services, and dependencies for better visibility before copilot assessment scan.
 - To use GitHub Copilot, you can install the following Integrated Development Environments (IDEs):
   - [Visual Studio 2022 version 17.14.7 or newer](https://visualstudio.microsoft.com/downloads/)
   - [Visual Studio Code](https://code.visualstudio.com/)
@@ -193,8 +193,6 @@ Allow copilot to install the necessary nuget packages and make the code changes 
 Next, the migration will be completed successfully and the hardcoded secrets will be replaced with Azure Key Vault integration.
 Copilot will also build the solution to ensure the changes are successfully applied. If failed, copilot will automatically try to fix and rebuild the application.
 
-**Note** - It is recommended to fix the errors manually if copilot fails to fix, please review the changes and make necessary modifications if required.
-
 ![kv complete](./images/kvcomplete.png)
 
 Here are some code changes made by copilot for Azure Key Vault integration:
@@ -235,8 +233,6 @@ Allow copilot to install the necessary nuget packages and make the code changes 
 
 Next, the migration will be completed successfully and the Local File IO references will be replaced with Azure Blob Storage integration.
 Copilot will also build the solution to ensure the changes are successfully applied. If failed, copilot will automatically try to fix and rebuild the application.
-
-**Note** - It is recommended to fix the errors manually if copilot fails to fix, please review the changes and make necessary modifications if required.
 
 ![blob complete](./images/blobcomplete.png)
 
@@ -279,8 +275,6 @@ Allow copilot to install the necessary nuget packages and make the code changes 
 Next, the migration will be completed successfully and the Windows auth for authenticating users references and dependencies will be replaced with Microsoft Entra ID integration.
 Copilot will also build the solution to ensure the changes are successfully applied. If failed, copilot will automatically try to fix and rebuild the application.
 
-**Note** - It is recommended to fix the errors manually if copilot fails to fix, please review the changes and make necessary modifications if required.
-
 ![entra id complete](./images/entraidcomplete1.png)
 ![entra id complete](./images/entraidcomplete2.png)
 
@@ -320,8 +314,6 @@ Allow copilot to install the necessary nuget packages and make the code changes 
 
 Next, the migration will be completed successfully and the hardcoded secrets will be replaced with Azure Service bus integration.
 Copilot will also build the solution to ensure the changes are successfully applied. If failed, copilot will automatically try to fix and rebuild the application.
-
-**Note** - It is recommended to fix the errors manually if copilot fails to fix, please review the changes and make necessary modifications if required.
 
 ![service bus complete](./images/servicebuscomplete.png)
 
@@ -417,8 +409,6 @@ Allow copilot to install the necessary nuget packages and make the code changes 
 
 - The agent will continue addressing errors until the solution builds successfully, based on the changes made for Azure Key Vault integration. Once the build succeeds, the agent will display a **Build Successful** status, followed by a **Migration Completed** confirmation.
 
-**Note** - It is recommended to fix the errors manually if copilot fails to fix, please review the changes and make necessary modifications if required.
-
 ![Migration Complete](./images-dnf/lcr06.png)
 
 Here are some code changes made by copilot for Azure Key Vault integration:
@@ -468,8 +458,6 @@ The agent resolves any reference issues encountered during the build process aft
 Next, the migration will be completed successfully and the Local File IO references will be replaced with Azure Blob Storage integration.
 Copilot will also build the solution to ensure the changes are successfully applied. If failed, copilot will automatically try to fix and rebuild the application.
 
-**Note** - It is recommended to fix the errors manually if copilot fails to fix, please review the changes and make necessary modifications if required.
-
 ![Migration Results](./images-dnf/scr14.png)
 
 Here are some code changes made by copilot for Azure Blob Storage integration:
@@ -512,8 +500,6 @@ If the agent is unable to install the package using dotnet command, it will atte
 Next, the migration will complete successfully, and all MSMQ operations in the code will be replaced with Azure Service Bus integration.
 Copilot will also build the solution to ensure the changes are successfully applied. If failed, copilot will automatically try to fix and rebuild the application.
 
-**Note** - It is recommended to fix the errors manually if copilot fails to fix, please review the changes and make necessary modifications if required.
-
 ![service bus build sucessfull](./images-dnf/fcr25.png)
 ![service bus complete](./images-dnf/fcr26.png)
 
@@ -549,8 +535,6 @@ Allow copilot to install the necessary nuget packages and make the code changes 
 
 Next, the migration will be completed successfully and all the SQL Server operational code will be replaced with Azure managed identity based SQL Database.
 Copilot will also build the solution to ensure the changes are successfully applied. If failed, copilot will automatically try to fix and rebuild the application.
-
-**Note** - It is recommended to fix the errors manually if copilot fails to fix, please review the changes and make necessary modifications if required.
 
 ![sql database migration sucessfull](./images-dnf/dcr07.png)
 ![sql database migration complete](./images-dnf/dcr08.png)
