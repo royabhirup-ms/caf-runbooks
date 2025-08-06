@@ -145,8 +145,6 @@ This is will generate the Assessment report which will be used to for code remed
 
 ![Assessment Report](./images/assessmentreport.png)
 
-For an example, here is the [full](./common/output_20250731_185355.json) assessment report.
-
 **Note** - Select the LLM **Claude Sonnet 4** or **Claude Sonnet 3.7** for best results.
 
 ### 5.3 Execution of GitHub Copilot app modernization for .NET Applications
