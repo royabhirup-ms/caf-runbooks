@@ -549,7 +549,7 @@ Here are some code changes made by copilot for Azure Service bus integration:
 
 1. **Claude Sonnet 4 & 3.7** : It is recommended to use the the LLM Claude Sonnet 4 but sometimes copilot fails to execute the code changes in middle of migration, in this scenario, review your changes carefully and use other option like Claude Sonnet 3.7 which also works well.
 
-2. **Manual Modification on Copilot Generated Prompts** : Sometimes copilot generated prompts may need manual modification to make it more accurate and relevant to the specific code remediation task. It is recommended to review the generated prompt and make necessary modifications before executing it.
+2. **Manual Modification on Copilot Generated Prompts (Using Prompt Engineering)** : Sometimes copilot generated prompts may need manual modification to make it more accurate and relevant to the specific code remediation task. It is recommended to review the generated prompt and make necessary modifications before executing it.
 
 In conclusion, it’s essential to validate prompts and incorporate contextual adjustments as necessary before proceeding.
 
