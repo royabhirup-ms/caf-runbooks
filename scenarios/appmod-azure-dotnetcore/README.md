@@ -550,7 +550,7 @@ Here are some code changes made by copilot for Azure Service bus integration:
 
     In conclusion, it’s essential to validate prompts and incorporate contextual adjustments as necessary before proceeding.
 
-3. **Proceed or "Continue" Option** : Sometimes copilot may be paused between migrations, you need to enter "Proceed" or "Continue" to resume the migration process.
+3. **"Proceed" or "Continue" Option** : Sometimes copilot may be paused between migrations, you need to enter "Proceed" or "Continue" to resume the migration process.
 
 ## 8. References
 
