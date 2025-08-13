@@ -548,7 +548,7 @@ Here are some code changes made by copilot for Azure Service bus integration:
 
 2. **Manual Modification on Copilot Generated Prompts (Using Prompt Engineering)** : Sometimes copilot generated prompts may need manual modification to make it more accurate and relevant to the specific code remediation task. It is recommended to review the generated prompt and make necessary modifications before executing it.
 
-In conclusion, it’s essential to validate prompts and incorporate contextual adjustments as necessary before proceeding.
+    In conclusion, it’s essential to validate prompts and incorporate contextual adjustments as necessary before proceeding.
 
 3. **Proceed or "Continue" Option** : Sometimes copilot may be paused between migrations, you need to enter "Proceed" or "Continue" to resume the migration process.
 
