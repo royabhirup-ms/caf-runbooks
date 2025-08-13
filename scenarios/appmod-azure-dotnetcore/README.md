@@ -102,13 +102,10 @@ App Modernization for .NET currently supports the following predefined tasks:
 ## 4. Pre-requisites
 
 - Finalization of the applications to be migrated (Wave planning)  
-- Run [APPCAT](https://learn.microsoft.com/en-us/azure/migrate/appcat/dotnet?view=migrate-classic) for assessment - Identify all applications, services, and dependencies for better visibility before copilot assessment scan.
 - To use GitHub Copilot, you can install the following Integrated Development Environments (IDEs):
-  - [Visual Studio 2022 version 17.14.7 or newer](https://visualstudio.microsoft.com/downloads/)
-  - [Visual Studio Code](https://code.visualstudio.com/)
+  - [Visual Studio 2022 version 17.14.11 or newer](https://visualstudio.microsoft.com/downloads/)
 - A GitHub account with GitHub Copilot enabled [See the full](https://github.com/features/copilot)
   - [Sign in to Visual Studio using a GitHub account](https://learn.microsoft.com/en-us/visualstudio/ide/work-with-github-accounts) with [Copilot access](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot#getting-access-to-copilot).
-
   - Supported subscription plans:
   - Copilot Pro
   - Copilot Pro+
@@ -574,11 +571,11 @@ In conclusion, it’s essential to validate prompts and incorporate contextual a
 
 ### 1. **Which version of Visual Studio should I use?**
 
-- Upgrade to Visual Studio 2022 version 17.14.7 or later for the best experience with both GitHub Copilot and App Modernization for .NET (Preview).
+- Upgrade to Visual Studio 2022 version 17.14.11 or later for the best experience with both GitHub Copilot and App Modernization for .NET (Preview).
 
 ### 2. **Which model should I use in GitHub Copilot agent mode?**
 
-- Based on our experience, GitHub Copilot and App Modernization for .NET work best with Claude Sonnet 3.7 and Claude Sonnet 4.0.
+- Based on our benchmark, GitHub Copilot and App Modernization for .NET work best with Claude Sonnet 4.0 then Claude Sonnet 3.7.
 
 ### 3. **What is the MCP Server, and why is there sometimes an initial delay when running a command?**
 
